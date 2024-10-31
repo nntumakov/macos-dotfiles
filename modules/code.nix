@@ -11,8 +11,7 @@
         pkgs.rustc
         pkgs.cargo
 
-        pkgs.texliveBasic
-        pkgs.texlivePackages.latexmk
+        pkgs.texliveFull
         pkgs.typst
     ];
 }
