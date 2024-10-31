@@ -12,6 +12,7 @@
         pkgs.cargo
 
         pkgs.texliveBasic
+        pkgs.texlivePackages.latexmk
         pkgs.typst
     ];
 }
