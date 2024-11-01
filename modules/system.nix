@@ -7,5 +7,6 @@
     environment.systemPackages = [
         pkgs.mkalias
         pkgs.gitFull
+        pkgs.mas
     ];
 }
