@@ -9,7 +9,6 @@
       environment.systemPackages =
         [
           pkgs.telegram-desktop
-          pkgs.obsidian
         ];
 
       system.activationScripts.applications.text = let

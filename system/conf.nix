@@ -16,7 +16,6 @@
                 "/System/Applications/Calendar.app"
                 "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
                 "${pkgs.telegram-desktop}/Applications/Telegram.app"
-                "${pkgs.obsidian}/Applications/Obsidian.app"
                 "/System/Applications/Utilities/Terminal.app"
                 /System/Applications/Launchpad.app
             ];
