@@ -18,6 +18,7 @@
                 modules/code.nix
 
                 apps/dev.nix
+                apps/docs.nix
                 apps/social.nix
             ];
         };

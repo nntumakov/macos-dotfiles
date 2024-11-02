@@ -32,6 +32,11 @@
             GuestEnabled  = false;
         };
 
+        screensaver = {
+            askForPassword = true;
+            askForPasswordDelay = 0;
+        };
+
         NSGlobalDomain = {
             AppleICUForce24HourTime = true;
             AppleInterfaceStyleSwitchesAutomatically = true;
