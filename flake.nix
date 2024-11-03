@@ -16,6 +16,7 @@
 
                 modules/system.nix
                 modules/code.nix
+                modules/db.nix
 
                 apps/dev.nix
                 apps/social.nix
