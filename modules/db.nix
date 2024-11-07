@@ -1,10 +1,9 @@
 {
-    config,
-    pkgs,
-    ...
-}: 
+  config,
+  pkgs,
+  ...
+}:
 {
-    environment.systemPackages = [
-        pkgs.postgresql_16
-    ];
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_16;
 }
