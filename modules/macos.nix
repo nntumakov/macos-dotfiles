@@ -4,7 +4,7 @@ in {
   system.defaults = {
     dock = {
       autohide = false;
-      show-recents = false;
+      show-recents = true;
       showhidden = false;
       static-only = false;
       persistent-apps = [
@@ -18,6 +18,7 @@ in {
         "/System/Applications/Launchpad.app"
       ];
       magnification = true;
+      tilesize = 54;
     };
 
     finder = {
