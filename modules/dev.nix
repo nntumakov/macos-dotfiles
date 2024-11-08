@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     neovim
   ];
@@ -13,13 +9,8 @@
       lfs.enable = true;
       delta.enable = true;
 
-      # userName = "AveryanAlex";
-      # userEmail = "alex@averyan.ru";
-
-      # signing = {
-      #   signByDefault = true;
-      #   key = "3C23C7BD99452036";
-      # };
+      userName = "Tumakov Nikolay";
+      userEmail = "nntumakov@icloud.com";
 
       extraConfig = {
         #   core.editor = "micro";

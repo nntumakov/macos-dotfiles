@@ -1,10 +1,6 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-{
-  hm.home.packages = [
-    pkgs.telegram-desktop
+{pkgs, ...}: {
+  hm.home.packages = with pkgs; [
+    telegram-desktop
+    obsidian
   ];
 }
