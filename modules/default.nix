@@ -3,17 +3,24 @@ let
 in
   {pkgs, ...}: {
     imports = [
-      ./code.nix
-      ./macos.nix
-      ./db.nix
-      ./dev.nix
       ./social.nix
+      ./code.nix
+      ./dev.nix
+      ./db.nix
+
       ./home.nix
+
+      ./macos.nix
+      ./brew.nix
+
       ./zsh
     ];
 
     nixpkgs = {
-      config.allowUnfree = true;
+      config = {
+        # allowUnsupportedSystem = true;
+        allowUnfree = true;
+      };
       hostPlatform = "aarch64-darwin";
     };
 
