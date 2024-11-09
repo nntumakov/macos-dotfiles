@@ -47,7 +47,6 @@
         {
           nix-homebrew = {
             enable = true;
-
             user = user;
             taps = {
               "homebrew/homebrew-core" = homebrew-core;

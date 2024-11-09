@@ -18,7 +18,6 @@ in
 
     nixpkgs = {
       config = {
-        # allowUnsupportedSystem = true;
         allowUnfree = true;
       };
       hostPlatform = "aarch64-darwin";
@@ -41,15 +40,10 @@ in
     };
 
     fonts = {
-      # enableDefaultPackages = true;
       packages = with pkgs; [
-        # corefonts # Proprietary: Times New Roman, etc
         jetbrains-mono
         meslo-lgs-nf
         monaspace
-        # noto-fonts
-        # noto-fonts-cjk
-        # noto-fonts-extra
       ];
     };
   }

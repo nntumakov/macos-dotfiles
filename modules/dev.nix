@@ -13,8 +13,7 @@
       userEmail = "nntumakov@icloud.com";
 
       extraConfig = {
-        #   core.editor = "micro";
-        init.defaultBranch = "main";
+        init.defaultBranch = "master";
         pull.rebase = true;
         push.autoSetupRemote = true;
       };

@@ -5,14 +5,7 @@
   ...
 }: {
   hm.home.packages = with pkgs; [
-    (python3.withPackages (
-      ps:
-        with ps; [
-          numpy
-          scipy
-          matplotlib
-        ]
-    ))
+    python3
 
     rustc
     cargo
@@ -50,46 +43,21 @@
 
       # Other langs
       pkgs.vscode-extensions.jnoortheen.nix-ide
-      # pkgs.vscode-extensions.rust-lang.rust-analyzer-nightly
-      # vm.galarius.vscode-opencl
-      # vm.github.vscode-github-actions
       vm.mechatroner.rainbow-csv
-      # vm.ms-vscode.cpptools
-      # vm.redhat.java
       vm.redhat.vscode-xml
       vm.redhat.vscode-yaml
       vm.tamasfe.even-better-toml
-      # vscode-marketplace.ms-azuretools.vscode-docker
-
-      # vm.davidanson.vscode-markdownlint
       vm.yzhang.markdown-all-in-one
 
-      # SQL
-      # vm.loyieking.smalise
-      # vm.mtxr.sqltools
-      # vm.mtxr.sqltools-driver-mysql
-      # vm.mtxr.sqltools-driver-pg
-      # vm.mtxr.sqltools-driver-sqlite
-      # vm.surendrajat.apklab
-
       # Tools
-      # pkgs.vscode-extensions.github.copilot-chat
-      # vm.bierner.emojisense
-      # vm.bito.bito
       vm.earshinov.sort-lines-by-selection
       vm.editorconfig.editorconfig
       vm.fill-labs.dependi
-      # vm.github.copilot
-      # vm.github.vscode-pull-request-github
-      # vm.gruntfuggly.todo-tree
       vm.stkb.rewrap
       vm.tyriar.sort-lines
 
       # Misc
-      # vm.donjayamanne.githistory
-      # vm.gitlab.gitlab-workflow
       vm.mkhl.direnv
-      # vm.wakatime.vscode-wakatime
     ];
     userSettings = {
       "nix.enableLanguageServer" = true;
@@ -107,13 +75,13 @@
         };
       };
 
-      "rust-analyzer.check.command" = "clippy";
-
+      # Editor
       "editor.quickSuggestions" = {
         "strings" = true;
       };
       "editor.tabCompletion" = "on";
       "editor.formatOnSave" = true;
+      "editor.wordWrap" = "on";
 
       # VCS
       "diffEditor.ignoreTrimWhitespace" = false;
@@ -149,6 +117,12 @@
       "isort.path" = ["${pkgs.python3Packages.isort}/bin/isort"];
       "python.testing.pytestEnabled" = true;
       "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
+
+      # Rust
+      "rust-analyzer.check.command" = "clippy";
+
+      # Latex Workshop
+      "latex-workshop.message.warning.show" = true;
     };
   };
 }
