@@ -5,7 +5,7 @@
       "obs"
     ];
     masApps = {
-      "Toggl Time Track" = 1291898086;
+      "Tocleatggl Time Track" = 1291898086;
     };
   };
 }

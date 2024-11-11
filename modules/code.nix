@@ -5,7 +5,16 @@
   ...
 }: {
   hm.home.packages = with pkgs; [
-    python3
+    (python3.withPackages (
+      ps:
+        with ps; [
+          jupyter
+          jupyter-core
+          numpy
+          scipy
+          matplotlib
+        ]
+    ))
 
     rustc
     cargo
