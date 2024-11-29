@@ -14,7 +14,7 @@ in {
         "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/System/Applications/Mail.app"
         "/Users/${user}/Applications/Home Manager Apps/Telegram.app"
-        "/Applications/Toggl Track.app"
+        "/Applications/Logseq.app"
         "/System/Applications/Utilities/Terminal.app"
         "/Users/${user}/Applications/Home Manager Apps/Obsidian.app"
         "/System/Applications/Launchpad.app"

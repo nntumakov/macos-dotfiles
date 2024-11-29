@@ -3,9 +3,10 @@
     enable = true;
     casks = [
       "obs"
+      "logseq"
     ];
     masApps = {
-      "Tocleatggl Time Track" = 1291898086;
+      "Toggl Time Track" = 1291898086;
     };
   };
 }
