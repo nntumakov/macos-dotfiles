@@ -22,6 +22,8 @@
     texliveFull
     typst
     nixfmt-rfc-style
+
+    djvu2pdf
   ];
 
   hm.programs.vscode = {
@@ -132,6 +134,7 @@
 
       # Latex Workshop
       "latex-workshop.message.warning.show" = true;
+      "latex-workshop.latex.autoBuild.run" = "onSave";
     };
   };
 }

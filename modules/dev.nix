@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
-    neovim
+    jellyfin-ffmpeg
   ];
 
   hm = {
