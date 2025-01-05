@@ -6,14 +6,12 @@
 }: {
   hm.home.packages = with pkgs; [
     tmux
+    nerdfonts
+    neovim
+    ripgrep
+    lazygit
+    gdu
+    bottom
+    nodejs_23
   ];
-
-  hm.programs.alacritty = {
-    enable = true;
-    settings = {
-      shell = {
-        program = "${pkgs.zsh}/bin/zsh";
-      };
-    };
-  };
 }

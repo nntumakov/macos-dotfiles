@@ -3,7 +3,7 @@ let
 in
   {pkgs, ...}: {
     imports = [
-      # ./terminal.nix
+      ./terminal.nix
       ./social.nix
       ./code.nix
       ./dev.nix

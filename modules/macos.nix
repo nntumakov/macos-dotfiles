@@ -14,9 +14,11 @@ in {
         "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
         "/System/Applications/Mail.app"
         "/Users/${user}/Applications/Home Manager Apps/Telegram.app"
-        # "/Applications/Logseq.app"
-        "/System/Applications/Utilities/Terminal.app"
+        "/Applications/Logseq.app"
         "/Users/${user}/Applications/Home Manager Apps/Obsidian.app"
+        "/System/Applications/Alacritty.app"
+        # "/Users/${user}/Applications/Home Manager Apps/Alacritty.app"
+        # "/System/Applications/Utilities/Terminal.app"
         "/System/Applications/Launchpad.app"
       ];
       magnification = true;

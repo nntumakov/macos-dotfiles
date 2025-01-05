@@ -25,6 +25,10 @@
       url = "github:homebrew/homebrew-bundle";
       flake = false;
     };
+    homebrew-services = {
+      url = "github:homebrew/homebrew-services";
+      flake = false;
+    };
   };
 
   outputs = inputs @ {
@@ -36,6 +40,7 @@
     homebrew-core,
     homebrew-cask,
     homebrew-bundle,
+    homebrew-services,
     ...
   }: let
     user = "tumakovnikolaj";
@@ -52,6 +57,7 @@
               "homebrew/homebrew-core" = homebrew-core;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-bundle" = homebrew-bundle;
+              "homebrew/homebrew-services" = homebrew-services;
             };
             mutableTaps = false;
           };
