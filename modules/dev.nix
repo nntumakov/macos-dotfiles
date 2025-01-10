@@ -1,8 +1,4 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    jellyfin-ffmpeg
-  ];
-
+{...}: {
   hm = {
     programs.git = {
       enable = true;

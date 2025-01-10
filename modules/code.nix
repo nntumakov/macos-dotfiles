@@ -21,9 +21,11 @@
 
     texliveFull
     typst
+
+    tex-fmt
     nixfmt-rfc-style
 
-    djvu2pdf
+    nodejs_23
   ];
 
   hm.programs.vscode = {
@@ -43,6 +45,9 @@
       vm.ms-python.python
       vm.ms-python.vscode-pylance
       vm.njpwerner.autodocstring
+
+      # cpp
+      vm.danielpinto8zz6.c-cpp-compile-run
 
       # Latex
       vm.james-yu.latex-workshop
@@ -135,6 +140,7 @@
       # Latex Workshop
       "latex-workshop.message.warning.show" = true;
       "latex-workshop.latex.autoBuild.run" = "onSave";
+      "latex-workshop.formatting.latex" = "tex-fmt";
     };
   };
 }

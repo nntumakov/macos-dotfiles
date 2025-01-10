@@ -6,6 +6,7 @@ in
       ./terminal.nix
       ./social.nix
       ./code.nix
+      ./utils.nix
       ./dev.nix
       ./db.nix
 

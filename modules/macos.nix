@@ -16,7 +16,7 @@ in {
         "/Users/${user}/Applications/Home Manager Apps/Telegram.app"
         "/Applications/Logseq.app"
         "/Users/${user}/Applications/Home Manager Apps/Obsidian.app"
-        "/System/Applications/Alacritty.app"
+        "/Applications/Alacritty.app"
         # "/Users/${user}/Applications/Home Manager Apps/Alacritty.app"
         # "/System/Applications/Utilities/Terminal.app"
         "/System/Applications/Launchpad.app"

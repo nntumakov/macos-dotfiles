@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   hm.home.packages = with pkgs; [
     tmux
     nerdfonts
@@ -12,6 +7,5 @@
     lazygit
     gdu
     bottom
-    nodejs_23
   ];
 }
