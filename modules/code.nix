@@ -19,6 +19,10 @@
     rustc
     cargo
 
+    llvmPackages_19.libcxx
+    llvmPackages_19.libcxxClang
+    llvmPackages_19.libcxxStdenv
+
     texliveFull
     typst
 
