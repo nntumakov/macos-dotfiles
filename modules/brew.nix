@@ -1,15 +1,23 @@
 {...}: {
   homebrew = {
     enable = true;
-    casks = [
-      "obs"
-      "logseq"
-      "alacritty"
-      "syncthing"
+    brews = [
+      "clamav"
+      "clang-format"
+      "cmake"
+      "llvm"
+      "ninja"
     ];
-    masApps = {
-      "Toggl Time Track" = 1291898086;
-      "V2Box" = 6446814690;
-    };
+    casks = [
+      "alacritty"
+      "chatgpt"
+      "kitty"
+      "logseq"
+      "obs"
+      "syncthing"
+      "thunderbird"
+      "obsidian"
+      "telegram"
+    ];
   };
 }

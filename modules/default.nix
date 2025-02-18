@@ -3,18 +3,13 @@ let
 in
   {pkgs, ...}: {
     imports = [
-      ./terminal.nix
-      ./social.nix
-      ./code.nix
-      ./utils.nix
-      ./dev.nix
-      ./db.nix
-
-      ./home.nix
-
-      ./macos.nix
       ./brew.nix
-
+      ./code.nix
+      ./db.nix
+      ./dev.nix
+      ./home.nix
+      ./macos.nix
+      ./utils.nix
       ./zsh
     ];
 

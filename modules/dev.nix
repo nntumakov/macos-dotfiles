@@ -1,5 +1,15 @@
-{...}: {
+{pkgs, ...}: {
   hm = {
+    home.packages = with pkgs; [
+      bottom
+      gdu
+      lazygit
+      neovim
+      nerdfonts
+      ripgrep
+      tmux
+    ];
+
     programs.git = {
       enable = true;
       lfs.enable = true;

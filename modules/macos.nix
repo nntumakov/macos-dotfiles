@@ -8,21 +8,21 @@ in {
       showhidden = false;
       static-only = false;
       persistent-apps = [
+        "/Applications/ChatGPT.app"
         "/Users/${user}/Applications/Home Manager Apps/Visual Studio Code.app"
         "/System/Applications/Notes.app"
         "/System/Applications/Calendar.app"
         "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-        "/System/Applications/Mail.app"
-        "/Users/${user}/Applications/Home Manager Apps/Telegram.app"
+        "/Applications/Thunderbird.app"
+        "/Applications/Telegram.app"
         "/Applications/Logseq.app"
-        "/Users/${user}/Applications/Home Manager Apps/Obsidian.app"
+        "/Applications/Obsidian.app"
         "/Applications/Alacritty.app"
-        # "/Users/${user}/Applications/Home Manager Apps/Alacritty.app"
-        # "/System/Applications/Utilities/Terminal.app"
         "/System/Applications/Launchpad.app"
       ];
       magnification = true;
-      tilesize = 54;
+      tilesize = 48;
+      orientation = "left";
     };
 
     finder = {

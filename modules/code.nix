@@ -10,24 +10,20 @@
         with ps; [
           jupyter
           jupyter-core
+          matplotlib
           numpy
           scipy
-          matplotlib
         ]
     ))
 
-    rustc
     cargo
-
-    llvmPackages_19.libcxx
-    llvmPackages_19.libcxxClang
-    llvmPackages_19.libcxxStdenv
+    rustc
 
     texliveFull
     typst
 
-    tex-fmt
     nixfmt-rfc-style
+    tex-fmt
 
     nodejs_23
   ];
@@ -51,21 +47,23 @@
       vm.njpwerner.autodocstring
 
       # cpp
-      vm.danielpinto8zz6.c-cpp-compile-run
+      vm.ms-vscode.cmake-tools
 
       # Latex
       vm.james-yu.latex-workshop
+      vm.orangex4.latex-sympy-calculator
 
       # Jupyter
-      pkgs.vscode-extensions.ms-toolsai.jupyter
-      pkgs.vscode-extensions.ms-toolsai.jupyter-renderers
       vm.ms-toolsai.datawrangler
+      vm.ms-toolsai.jupyter
+      vm.ms-toolsai.jupyter-renderers
 
       # Other langs
-      pkgs.vscode-extensions.jnoortheen.nix-ide
+      vm.jnoortheen.nix-ide
       vm.mechatroner.rainbow-csv
       vm.redhat.vscode-xml
       vm.redhat.vscode-yaml
+      vm.richie5um2.vscode-sort-json
       vm.tamasfe.even-better-toml
       vm.yzhang.markdown-all-in-one
 
@@ -109,42 +107,51 @@
       "git.confirmSync" = false;
       "git.enableSmartCommit" = true;
 
-      "editor.fontLigatures" = "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'";
       "editor.fontFamily" = "'Monaspace Neon', monospace";
+      "editor.fontLigatures" = "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'";
       "terminal.integrated.fontFamily" = "MesloLGS NF";
 
       # Other
+      "direnv.restart.automatic" = true;
       "editor.unicodeHighlight.allowedLocales".ru = true;
       "files.autoSave" = "afterDelay";
       "redhat.telemetry.enabled" = false;
       "sortLines.filterBlankLines" = true;
       "workbench.startupEditor" = "none";
-      "direnv.restart.automatic" = true;
 
       # Python
-      "python.analysis.autoImportCompletions" = true;
       "black-formatter.path" = ["${pkgs.black}/bin/black"];
+      "mypy-type-checker.args" = ["--disable-error-code=import-untyped"];
+      "python.analysis.autoImportCompletions" = true;
       "python.formatting.provider" = "black";
       "python.languageServer" = "Pylance";
-      "mypy-type-checker.args" = ["--disable-error-code=import-untyped"];
       "mypy-type-checker.severity" = {
         "error" = "Warning";
         "note" = "Information";
       };
       # "mypy-type-checker.path" = [ "${pkgs.mypy}/bin/mypy" ];
-      "python.poetryPath" = "${pkgs.poetry}/bin/poetry";
-      "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
       "isort.path" = ["${pkgs.python3Packages.isort}/bin/isort"];
+      "python.poetryPath" = "${pkgs.poetry}/bin/poetry";
       "python.testing.pytestEnabled" = true;
       "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
+      "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
 
       # Rust
       "rust-analyzer.check.command" = "clippy";
 
       # Latex Workshop
-      "latex-workshop.message.warning.show" = true;
-      "latex-workshop.latex.autoBuild.run" = "onSave";
+      "latex-sympy-calculator.mac" = "/Users/tumakovnikolaj/Private/tex-doc-rep/.venv/bin/python3";
       "latex-workshop.formatting.latex" = "tex-fmt";
+      "latex-workshop.latex.autoBuild.run" = "never";
+      "latex-workshop.message.warning.show" = true;
+
+      # CMake
+      "cmake.cmakePath" = "/opt/homebrew/bin/cmake";
+      "cmake.pinnedCommands" = [
+        "workbench.action.tasks.configureTaskRunner"
+        "workbench.action.tasks.runTask"
+      ];
+      "cmake.showOptionsMovedNotification" = false;
     };
   };
 }

@@ -52,6 +52,12 @@
           file = "p10k.zsh";
         }
       ];
+
+      initExtra = ''
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+        path=('/opt/homebrew/opt/llvm/bin' $path)
+        export PATH
+      '';
     };
   };
 
