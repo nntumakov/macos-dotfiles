@@ -10,7 +10,7 @@ in
       {
         options = {
           hm = lib.mkOption {
-            type = options.home-manager.users.type.functor.wrapped;
+            type = options.home-manager.users.type.nestedTypes.elemType;
             default = {};
           };
         };
@@ -25,7 +25,7 @@ in
     home-manager.users.${user} = {
       programs.home-manager.enable = true;
       home = {
-        stateVersion = "24.05";
+        stateVersion = "24.11";
         username = user;
         homeDirectory = "/Users/${user}";
       };

@@ -5,7 +5,8 @@
       gdu
       lazygit
       neovim
-      nerdfonts
+      nerd-fonts._0xproto
+      nerd-fonts.droid-sans-mono
       ripgrep
       tmux
     ];

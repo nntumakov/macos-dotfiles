@@ -27,7 +27,7 @@ in
 
     nix.settings.experimental-features = "nix-command flakes";
 
-    services.nix-daemon.enable = true;
+    # services.nix-daemon.enable = true;
 
     programs.zsh.enable = true;
 
