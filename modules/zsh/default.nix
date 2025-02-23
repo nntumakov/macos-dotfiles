@@ -4,7 +4,6 @@
   ...
 }: {
   hm = {
-    # Beautiful cat
     programs.bat.enable = true;
 
     programs.zsh = {
@@ -14,7 +13,6 @@
         size = 30000;
         save = 30000;
         extended = true;
-        # path = "/.local/state/zsh/history";
       };
 
       dotDir = ".config/zsh";
@@ -24,12 +22,6 @@
       autocd = true;
 
       syntaxHighlighting.enable = true;
-
-      shellAliases = {
-        # ip = "ip --color=auto";
-
-        # upd = "nh os switch";
-      };
 
       oh-my-zsh = {
         enable = true;
@@ -62,5 +54,4 @@
   };
 
   environment.pathsToLink = ["/share/zsh"];
-  # persist.state.homeDirs = [".local/state/zsh"];
 }
