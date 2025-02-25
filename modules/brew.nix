@@ -1,6 +1,7 @@
 {...}: {
   homebrew = {
     enable = true;
+
     brews = [
       "clamav"
       "clang-format"
@@ -8,6 +9,7 @@
       "llvm"
       "ninja"
     ];
+    
     casks = [
       "alacritty"
       "chatgpt"

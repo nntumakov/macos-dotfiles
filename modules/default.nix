@@ -1,7 +1,7 @@
 let
   user = "tumakovnikolaj";
 in
-  {pkgs, ...}: {
+  {...}: {
     imports = [
       ./brew.nix
       ./code.nix
@@ -27,20 +27,8 @@ in
 
     nix.settings.experimental-features = "nix-command flakes";
 
-    # services.nix-daemon.enable = true;
-
-    programs.zsh.enable = true;
-
     users.users.${user} = {
       name = user;
       home = "/Users/${user}";
-    };
-
-    fonts = {
-      packages = with pkgs; [
-        jetbrains-mono
-        meslo-lgs-nf
-        monaspace
-      ];
     };
   }

@@ -4,7 +4,19 @@
   ...
 }: {
   hm = {
+    home.packages = with pkgs; [
+      bottom
+      gdu
+      lazygit
+      neovim
+      nerd-fonts._0xproto
+      nerd-fonts.droid-sans-mono
+      ripgrep
+      tmux
+    ];
+
     programs.bat.enable = true;
+    programs.eza.enable = true;
 
     programs.zsh = {
       enable = true;
@@ -45,6 +57,12 @@
         }
       ];
 
+      shellAliases = {
+        ls = "eza --icons -l";
+        la = "eza --icons -la";
+        lt = "eza --icons --tree";
+      };
+
       initExtra = ''
         eval "$(/opt/homebrew/bin/brew shellenv)"
         path=('/opt/homebrew/opt/llvm/bin' $path)
@@ -54,4 +72,12 @@
   };
 
   environment.pathsToLink = ["/share/zsh"];
+
+  fonts = {
+    packages = with pkgs; [
+      jetbrains-mono
+      meslo-lgs-nf
+      monaspace
+    ];
+  };
 }

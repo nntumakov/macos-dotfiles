@@ -1,14 +1,27 @@
 {pkgs, ...}: {
   hm = {
     home.packages = with pkgs; [
-      bottom
-      gdu
-      lazygit
-      neovim
-      nerd-fonts._0xproto
-      nerd-fonts.droid-sans-mono
-      ripgrep
-      tmux
+      (python3.withPackages (
+        ps:
+          with ps; [
+            jupyter
+            jupyter-core
+            matplotlib
+            numpy
+            scipy
+          ]
+      ))
+
+      cargo
+      rustc
+
+      texliveFull
+      typst
+
+      nixfmt-rfc-style
+      tex-fmt
+
+      nodejs_23
     ];
 
     programs.git = {
@@ -26,16 +39,6 @@
       };
     };
 
-    programs.eza = {
-      enable = true;
-    };
-
-    programs.zsh.shellAliases = {
-      ls = "eza --icons -l";
-      la = "eza --icons -la";
-      lt = "eza --icons --tree";
-    };
+    programs.direnv.enable = true;
   };
-
-  hm.programs.direnv.enable = true;
 }

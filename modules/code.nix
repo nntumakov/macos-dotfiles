@@ -4,30 +4,6 @@
   lib,
   ...
 }: {
-  hm.home.packages = with pkgs; [
-    (python3.withPackages (
-      ps:
-        with ps; [
-          jupyter
-          jupyter-core
-          matplotlib
-          numpy
-          scipy
-        ]
-    ))
-
-    cargo
-    rustc
-
-    texliveFull
-    typst
-
-    nixfmt-rfc-style
-    tex-fmt
-
-    nodejs_23
-  ];
-
   hm.programs.vscode = {
     enable = true;
 
