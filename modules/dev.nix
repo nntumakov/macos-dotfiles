@@ -22,6 +22,8 @@
       tex-fmt
 
       nodejs_23
+
+      pre-commit
     ];
 
     programs.git = {

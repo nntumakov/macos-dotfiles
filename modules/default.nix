@@ -9,7 +9,7 @@ in
       ./dev.nix
       ./home.nix
       ./macos.nix
-      ./utils.nix
+      ./media.nix
       ./zsh
     ];
 
