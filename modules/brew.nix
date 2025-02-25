@@ -3,7 +3,6 @@
     enable = true;
 
     brews = [
-      "clamav"
       "clang-format"
       "cmake"
       "llvm"
