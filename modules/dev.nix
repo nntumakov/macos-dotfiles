@@ -12,6 +12,10 @@
           ]
       ))
 
+      clang
+      cmake
+      cmake-format
+
       cargo
       rustc
 

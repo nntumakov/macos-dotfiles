@@ -26,6 +26,7 @@
 
         # cpp
         vm.ms-vscode.cmake-tools
+        vm.llvm-vs-code-extensions.vscode-clangd
 
         # Latex
         vm.james-yu.latex-workshop

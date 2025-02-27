@@ -1,13 +1,6 @@
 {...}: {
   homebrew = {
     enable = true;
-
-    brews = [
-      "clang-format"
-      "cmake"
-      "llvm"
-      "ninja"
-    ];
     
     casks = [
       "alacritty"
@@ -15,10 +8,11 @@
       "kitty"
       "logseq"
       "obs"
-      "syncthing"
-      "thunderbird"
       "obsidian"
+      "syncthing"
       "telegram"
+      "thunderbird"
+      "yandex-music"
     ];
   };
 }
