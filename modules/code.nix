@@ -15,6 +15,10 @@
       extensions = let
         vm = inputs.nix-vscode-extensions.extensions.${pkgs.hostPlatform.system}.vscode-marketplace;
       in [
+        # #AI
+        # vm.github.copilot
+        # vm.github.copilot-chat
+
         # Python
         vm.ms-python.black-formatter
         vm.ms-python.debugpy
@@ -108,11 +112,10 @@
           "error" = "Warning";
           "note" = "Information";
         };
-        # "mypy-type-checker.path" = [ "${pkgs.mypy}/bin/mypy" ];
         "isort.path" = ["${pkgs.python3Packages.isort}/bin/isort"];
         "python.poetryPath" = "${pkgs.poetry}/bin/poetry";
         "python.testing.pytestEnabled" = true;
-        "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
+        # "python.testing.pytestPath" = "${pkgs.python3Packages.pytest}/bin/pytest";
         "python.venvPath" = "~/.cache/pypoetry/virtualenvs";
 
         # Rust
@@ -121,11 +124,11 @@
         # Latex Workshop
         "latex-sympy-calculator.mac" = "/Users/tumakovnikolaj/Private/tex-doc-rep/.venv/bin/python3";
         "latex-workshop.formatting.latex" = "tex-fmt";
-        "latex-workshop.latex.autoBuild.run" = "never";
-        "latex-workshop.message.warning.show" = true;
+        "latex-workshop.latex.autoBuild.run" = "onSave";
+        "latex-workshop.message.warning.show" = false;
 
         # CMake
-        "cmake.cmakePath" = "/opt/homebrew/bin/cmake";
+        "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
         "cmake.pinnedCommands" = [
           "workbench.action.tasks.configureTaskRunner"
           "workbench.action.tasks.runTask"

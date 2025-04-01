@@ -7,6 +7,7 @@
     home.packages = with pkgs; [
       bottom
       gdu
+      fzf
       lazygit
       neovim
       ripgrep

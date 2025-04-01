@@ -5,9 +5,9 @@
         ps:
           with ps; [
             jupyter
-            jupyter-core
             matplotlib
             numpy
+            pytest
             scipy
           ]
       ))

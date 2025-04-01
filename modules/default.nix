@@ -2,6 +2,13 @@ let
   user = "tumakovnikolaj";
 in
   {...}: {
+    nixpkgs = {
+      config = {
+        allowUnfree = true;
+      };
+      hostPlatform = "aarch64-darwin";
+    };
+
     imports = [
       ./brew.nix
       ./code.nix
@@ -12,13 +19,6 @@ in
       ./media.nix
       ./zsh
     ];
-
-    nixpkgs = {
-      config = {
-        allowUnfree = true;
-      };
-      hostPlatform = "aarch64-darwin";
-    };
 
     system = {
       configurationRevision = null;
